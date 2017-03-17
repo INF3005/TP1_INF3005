@@ -1,0 +1,22 @@
+p{
+	text-align: justify;
+	font-family: "Times New Roman", Times, serif;
+}
+.footer{
+	color: black;
+	font-family: "Times New Roman", Times, sans-serif;
+	font-style: oblique;
+	
+}
+.label{
+	color: black;
+	font-family: "Times New Roman", Times, sans-serif;
+	font-style: oblique;
+	font-size:200%;
+}
+.exR {
+	direction: rtl;
+}
+#erreur{
+	color: red;
+}
