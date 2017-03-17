@@ -1,0 +1,14 @@
+{% extends "header.html" %}
+{% block content %}  
+{% for article in articles %}
+	    <div class ="panel article">
+		    <div class="panel-heading">
+			    <h5><div class="label text-right"><a href="article/{{ article[2] }}">Titre : {{ article[1] }}</a></div></h5>			
+			</div>
+		    
+			<div class="footer" >			   
+				<div>date de publication : {{ article[4] }} </div>						
+			</div>		 		    
+		</div>		  
+      {% endfor %}
+{% endblock %}
