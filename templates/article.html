@@ -1,0 +1,28 @@
+{% extends "header.html" %}
+{% block content %}  
+
+	    <div class ="panel panel-primary article">
+		    <div class="panel-heading">
+			    <h5><div class="label text-right">Titre : {{ article[1] }}</div></h5>			
+			</div>
+		    <div class="panel-body"> 
+			     <div class="span"> 
+					<label>Id :</label> <br>
+					<p> {{ article[0] }} </p>
+				 </div>
+			     <div class="span"> 
+					<label>Paragraphe :</label> <br>
+					<p> {{ article[5] }} </p>
+				 </div>
+				 <div class="span"> 
+					<label>Identifiant :</label> <br>
+					<p> {{ article[2] }} </p>
+				 </div>
+			</div>
+			<div class="footer" >			   
+				<div>date de publication : {{ article[4] }} </div>
+				<div class="exR">auteur : {{ article[3] }}</div>				
+			</div>		 		    
+		</div>		  
+     
+{% endblock %}
