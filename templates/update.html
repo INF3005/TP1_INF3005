@@ -1,0 +1,17 @@
+{% extends "header.html" %}
+{% block content %} 
+	<h1>Modifier Article</h1>  
+    <div>
+        <form action="http://localhost:5000/modifier/{{ article[0] }}" method="POST">
+		    <h4>Article:</h4>            
+            <div class=""> Titre : <input name="titre" value={{ article[1] }}></input> </div> <br>	
+            <div class=""> Identifiant : <input name="Identifiant" readonly = "readonly" value={{ article[2] }}></input> </div> <br>	
+            <div class=""> Auteur : <input name="auteur" readonly = "readonly" value={{ article[3] }}></input> </div> <br>	
+            <div class=""> Date de publication : <input type="text" readonly = "readonly" name="date_publication" value={{ article[4] }}></input> </div> <br>	
+            <div class=""> Paragraphe : <input name="paragraphe" value={{ article[5] }}></input> </div> <br>				
+	        <div class="span"> date de publication :{{ article[4] }}</div> <br>
+		    <input type="submit" value="Envoyer">
+		</form>
+	    
+    </div>
+{% endblock %}
