@@ -1,0 +1,50 @@
+Services API:
+service : créer un nouvel article
+        URL: "/api/inserer"
+		Methode HTPP: POST
+		structure de la données a envoyé: 
+		                                * Type de la données: JSON
+										* représentation : 
+															{
+																"username": nom d'utilisateur de l'administrateur
+																"password": mot de passe de l'administrateur
+																"titre": titre du nouveau article
+																"identifiant": identifiant de l'article peut être changé si cela existe déjà dans la base de donnée
+																"auteur": nom de l'auteur de l'article
+																"paragraphe": le paragraphe ou le contenu de l'article
+																"date_publication": date de publication de l'article en forme YYYY-MM-DD
+															}
+		reponse serveur : ** code statut 407 et un message : si l'authentification de l'administrateur echoue
+		                  ** code statut 400 si le username et/ou password sont vide ou un parametre n'est pas valide
+						  ** code statut 405: si un paramètre n'existe pas le json envoye
+						  ** code statut 201: si l'article est créé
+						  
+service : obtenir la liste des articles
+        URL: "/api/listeArticlePublie"
+		Methode HTPP: GET
+		structure de la données a envoyé: pas de donnée à envoyé		                               
+		reponse serveur : ** code statut 204: si la base est vide
+		                  ** code statut 200 : retourne un tableau json du format 
+						                                   {																
+																"titre": titre du nouveau article
+																"identifiant": identifiant de l'article peut être changé si cela existe déjà dans la base de donnée
+																"auteur": nom de l'auteur de l'article
+																"paragraphe": le paragraphe ou le contenu de l'article
+																"date_publication": date de publication de l'article en forme YYYY-MM-DD
+															}
+															
+service : obtenir un article
+        URL: "/api/article"
+		Methode HTPP: GET
+		structure de la données a envoyé: * type : objet json
+                                          * format : {"identifiant":indice pour recuperer cet article}		
+		reponse serveur : ** code statut 404: si l'article est inexistant
+		                  ** code statut 200 : retourne un objet json du format 
+						                                   {																
+																"titre": titre du nouveau article
+																"identifiant": identifiant de l'article peut être changé si cela existe déjà dans la base de donnée
+																"auteur": nom de l'auteur de l'article
+																"paragraphe": le paragraphe ou le contenu de l'article
+																"date_publication": date de publication de l'article en forme YYYY-MM-DD
+															}
+						  
