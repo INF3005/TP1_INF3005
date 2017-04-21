@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--
+ Etudiant 1: 
+ code Permanent: ADJA11129400
+ Nom: ADJANA
+ Prenoms: ANDNANE
+ Etudiant 2:
+ code Permanent: HAZH12079009
+ Nom: HAZOUNME
+ Prenoms: HENRI JOEL
+-->
+<html lang="fr">
+<head>
+    <title>CMS Journal</title>
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href = "{{ url_for('static', filename = 'style2.css') }}" >
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">    
+</head>
+<body>
+    <div class="container" id="container">
+        <h1>creer compte administrateur</h1>
+        <div id="erreur">
+
+        </div>
+        <form action="http://localhost:5000/creerCompte" method="POST">
+
+            <div class="form-group row">
+
+                <div class="col-sm-4">
+                    <label class="control-label col-sm-4" for="name">Nom:</label>
+                    <input type="text" class="form-control" name="username" id="name" placeholder="Entrer Nom">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-4">
+
+                    <input type="mail" class="form-control" name="email" id="mail" value="">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-4">
+                    <label class="control-label col-sm-4" for="password">Mot de passe:</label>
+                    <input type="password" class="form-control" name="password" id="password">
+                </div>
+            </div>
+            <br>
+
+            <div class="form-group row">
+                <div class="col-sm-offset-2 col-sm-4">
+                    <button type="submit" class="btn btn-default">Envoyer</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
